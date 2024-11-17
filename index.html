@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <script src="script.js" defer></script>
+    <!-- Load Google Charts Library -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
@@ -498,7 +501,9 @@
 
                 </div>
               </div>
-
+              <iframe title="Electricity Access In Ghana " aria-label="Map" id="datawrapper-chart-Z4hPl" src="https://datawrapper.dwcdn.net/Z4hPl/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="777" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+              </script>
+                        
             </div><!-- End Customers Card -->
 
             <!-- Reports -->
@@ -517,10 +522,7 @@
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
                 </div>
-<iframe title="Electricity Access In Ghana " aria-label="Map" id="datawrapper-chart-Z4hPl" src="https://datawrapper.dwcdn.net/Z4hPl/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="777" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-<iframe title="Ownership of smart phone" aria-label="Map" id="datawrapper-chart-8MYd5" src="https://datawrapper.dwcdn.net/8MYd5/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="758" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
+
                 <div class="card-body">
                   <h5 class="card-title">Electricity Consumption in Ghana <span>/2017-2022</span></h5>
 
@@ -623,12 +625,12 @@
 </div><!-- End Top Selling -->
               </div>
             </div><!-- End Reports -->
-
-            
+     
 
            
           </div>
         </div><!-- End Left side columns -->
+        
 
         <!-- Right side columns -->
         <div class="col-lg-4">
@@ -652,7 +654,7 @@
             <div class="card-body pb-0">
               <h5 class="card-title">Pie Chart<span>| 2021</span></h5>
             
-              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+              <div id="trafficChart" style="min-height: 300px;" class="echart"></div>
             
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -708,20 +710,63 @@
         
 
   </div>
-               <!-- Image Section -->
+  
+  <iframe title="Ownership of smart phone" aria-label="Map" id="datawrapper-chart-8MYd5" src="https://datawrapper.dwcdn.net/8MYd5/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="758" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+  </script>
+        
+                <!-- Image Section -->
         <div class="image-container">
           <div class="dashboard-image">
               <h2>Night Light Data</h2>
               <img src="assets/img/nightlight.jpg" alt="Dashboard Image">
           </div>
-      </div>   
- <br><br>
-           <!-- Image Section -->
-           <div class="image-container">
-            <div class="dashboard-image">
-                <img src="assets/img/radiant.jpg" alt="Dashboard Image" style="width: 500px; height: 400px;">
-            </div>
-        </div> 
+      </div> 
+
+      <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+          // Data for appliances and their energy consumption in hours per unit
+          var data = google.visualization.arrayToDataTable([
+            ['Appliance', 'Hours per Unit (kWh)', { role: 'style' }],
+            ['CFL Bulb 11W', 95, 'color: #4caf50'],
+            ['CFL Bulb 20W', 25, 'color: #8bc34a'],
+            ['Incandescent Bulb 60W', 17, 'color: #ffc107'],
+            ['Fan 70W', 14, 'color: #ff9800'],
+            ['Iron 1000W', 25, 'color: #f44336']
+            
+          ]);
+    
+          // Chart options to adjust size, title, and make it responsive
+          var options = {
+            title: 'Electricity Consumption of Domestic Appliances',
+            legend: { position: 'none' },
+            chartArea: { width: '70%', height: '80%' },  // Keep bars within the visible area
+            hAxis: {
+              title: 'Hours per Unit (kWh)',
+              minValue: 0
+            },
+            vAxis: {
+              title: 'Appliance'
+            },
+            backgroundColor: '#f0f4f8'   // Background color for the chart
+          };
+    
+          // Render the chart in the specified container
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }
+    
+        // Redraw chart on window resize to ensure it stays responsive
+        window.addEventListener('resize', drawChart);
+      </script>
+      <div class="chart-container">
+        <div id="chart_div" style="width: 100%; height: 100%;"></div>
+      </div>
+
+        </div>
+         
 
             </div>
           </div><!-- End Website Traffic -->
@@ -744,6 +789,44 @@
             <div class="card-body pb-0">
              
           </div><!-- End News & Updates -->
+          <!-- Image Section -->
+<script type="text/javascript">
+  // Load the Google Charts package
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Function to draw the bar chart
+  function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+          ['Month', 'Households'],
+          ['Jan', 44283],
+          ['Feb', 47466],
+          ['Mar', 54898],
+          ['Apr', 51474],
+          ['May', 49607],
+          ['Jun', 45284]
+      ]);
+
+      var options = {
+          title: 'Upper West total Households electricity Consumption/Purchase from (Jan - Jun 2024)',
+          chartArea: {width: '60%'},
+          hAxis: {
+              title: 'Total Households',
+              minValue: 0
+          },
+          vAxis: {
+              title: 'Month'
+          },
+          colors: ['#1b9e77']
+      };
+
+      // Render the chart inside the element with ID 'bar_chart'
+      var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+      chart.draw(data, options);
+  }
+</script>
+<!-- Div element for the Google Bar Chart -->
+<div id="bar_chart" style="width: 100%; height: 500px; margin: auto;"></div>
 
         </div><!-- End Right side columns -->
 

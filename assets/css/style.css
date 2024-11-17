@@ -1278,3 +1278,197 @@ th, td {
 th {
     background-color:  #3498db;
 }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #E3F2FD;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #424242;
+}
+
+.container {
+  max-width: 800px; /* Increased width for more room */
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Space between content and image */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.content {
+  flex: 1; /* Allow content to take available space */
+}
+
+.bluetooth-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.status-connected {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.status-disconnected {
+  color: #e57373;
+  font-weight: 600;
+}
+
+.connect-btn {
+  background-color: #2979FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.device-info {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+}
+
+.on-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.off-button {
+  background-color: #e57373;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.on-button:hover {
+  background-color: #388E3C;
+}
+
+.off-button:hover {
+  background-color: #d32f2f;
+}
+
+.status-on {
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.status-off {
+  color: #e57373;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.image-container {
+  margin-left: 20px; /* Space between content and image */
+}
+
+.dashboard-image img {
+  max-width: 200px; /* Fixed size for the image */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden initially */
+}
+
+.read-more-btn {
+  background-color: #2979FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: 100%; /* Full-width button */
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column; /* Stack content and image on smaller screens */
+      align-items: center;
+  }
+  .image-container {
+      margin-left: 0;
+      margin-top: 20px; /* Add space above image when stacked */
+  }
+}
+
+
+.chart-container {
+  width: 100%;        /* Full-width within parent container */
+  max-width: 600px;   /* Maximum width for larger screens */
+  height: 400px;      /* Height of the chart */
+  margin: 0 auto;     /* Center alignment */
+  padding: 10px;
+}
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .chart-container {
+    height: 300px;    /* Reduce height on smaller screens */
+  }
+}
+@media (max-width: 400px) {
+  .chart-container {
+    height: 250px;    /* Further reduce height on very small screens */
+  }
+}
