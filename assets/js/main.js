@@ -324,20 +324,16 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
-require('dotenv').config();
-
-const apiKey = process.env.API_SECRET_KEY;
-
-// Example usage
-console.log(`Your API key is: ${API_KEY}`);
-
-
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
 // Replace with your valid OpenAI API key
-const API_KEY = API_SECRET_KEY; 
+require('dotenv').config();
+
+const API_KEY = process.env.OPENAI_API_KEY || "";
 const API_URL = "https://api.openai.com/v1/chat/completions";
+
+// The rest of the code remains the same
 
 const createChatLi = (message, className) => {
   // Create a chat <li> element with passed message and className
