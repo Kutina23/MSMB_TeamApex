@@ -328,12 +328,8 @@ let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
 // Replace with your valid OpenAI API key
-require('dotenv').config();
-
-const API_KEY = process.env.OPENAI_API_KEY || "";
+const API_KEY = "API_SECRET_KEY"; 
 const API_URL = "https://api.openai.com/v1/chat/completions";
-
-// The rest of the code remains the same
 
 const createChatLi = (message, className) => {
   // Create a chat <li> element with passed message and className
